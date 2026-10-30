@@ -1,0 +1,52 @@
+\documentclass{article}
+\usepackage{zref-clever}
+
+\title{Übungszettel 2}
+\author{Linus Faber (4764260), Adrian Wünschel (4763715)}
+
+\begin{document}
+\maketitle
+
+\section*{Aufgabe 2.1}
+\label{sec:a21}
+
+a)
+
+\begin{itemize}
+  \item Kotlin:
+  \begin{itemize}
+    \item :build
+    \item :check
+    \item :assemble
+  \end{itemize}
+  \item Application:
+  \begin{itemize}
+    \item :distZip
+    \item :distTar
+    \item :startScripts
+  \end{itemize}
+  \item ktlint:
+  \begin{itemize}
+    \item :loadKtlintReporters
+    \item :runKtlintCheckOverKotlinScripts
+    \item :ktlintKotlinScriptCheck
+    \item :runKtlintCheckOverMainSourceSet
+    \item :ktlintMainSourceSetCheck
+    \item :runKtlintCheckOverTestSourceSet
+    \item :ktlintTestSourceSetCheck
+  \end{itemize}
+  \item detekt:
+  \begin{itemize}
+    \item :detekt
+  \end{itemize}
+\end{itemize}
+
+Für :distTar und :startScripts haben wir und von Gemini helfen lassen.
+
+b)
+
+\texttt{--continue} führt auch noch die weiteren Tasks nach einem Error aus
+
+\end{document}
+
+
