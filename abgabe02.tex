@@ -11,56 +11,57 @@
 \section*{Aufgabe 2.1}
 \label{sec:a21}
 
-\begin{enumerate}[label=\alpha*]
+\begin{enumerate}[label=\alph*)]
 
   \item % a)
-
   \begin{itemize}
     \item Kotlin:
     \begin{itemize}
-      \item :build
-      \item :check
-      \item :assemble
+      \item \texttt{:build}
+      \item \texttt{:check}
+      \item \texttt{:assemble}
     \end{itemize}
     \item Application:
     \begin{itemize}
-      \item :distZip
-      \item :distTar
-      \item :startScripts
+      \item \texttt{:distZip}
+      \item \texttt{:distTar}
+      \item \texttt{:startScripts}
     \end{itemize}
     \item ktlint:
     \begin{itemize}
-      \item :loadKtlintReporters
-      \item :runKtlintCheckOverKotlinScripts
-      \item :ktlintKotlinScriptCheck
-      \item :runKtlintCheckOverMainSourceSet
-      \item :ktlintMainSourceSetCheck
-      \item :runKtlintCheckOverTestSourceSet
-      \item :ktlintTestSourceSetCheck
+      \item \texttt{:loadKtlintReporters}
+      \item \texttt{:runKtlintCheckOverKotlinScripts}
+      \item \texttt{:ktlintKotlinScriptCheck}
+      \item \texttt{:runKtlintCheckOverMainSourceSet}
+      \item \texttt{:ktlintMainSourceSetCheck}
+      \item \texttt{:runKtlintCheckOverTestSourceSet}
+      \item \texttt{:ktlintTestSourceSetCheck}
     \end{itemize}
     \item detekt:
     \begin{itemize}
-      \item :detekt
+      \item \texttt{:detekt}
     \end{itemize}
   \end{itemize}
 
-  Für :distTar und :startScripts haben wir und von Gemini helfen lassen.
+  Für \texttt{:distTar} und \texttt{:startScripts} haben wir uns von Gemini helfen lassen.
 
   \item % b)
-
   3 failures:
 
   \begin{itemize}
-    \item :detekt
-    \item ktlintMainSourceSetCheck, DoublyLinkedList.kt:98:11, Missing spacing after "if"
-    \item :test, DoublyLinkedList.kt:101, NullPointerException
+    \item \texttt{:detekt}, \texttt{DoublyLinkedList.kt:98}, MagicNumber
+    \item \texttt{ktlintMainSourceSetCheck}, \texttt{DoublyLinkedList.kt:98:}, Missing spacing after "if"
+    \item \texttt{:test}, \texttt{DoublyLinkedList.kt:101}, NullPointerException
   \end{itemize}
 
-  \texttt{--continue} führt auch noch die weiteren Tasks nach einem Error aus
+  \texttt{-{-}continue} führt auch noch die weiteren Tasks nach einem Error aus.
+
+  \item %c)
+  gradle check macht exklusiv \texttt{:detekt} und \texttt{:ktlintMainSourceSetCheck}.
+
+  Dann macht gradle test diese nicht, \texttt{:test} aber schon.
+
 
 \end{enumerate}
 
-
 \end{document}
-
-
