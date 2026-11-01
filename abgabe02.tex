@@ -56,7 +56,7 @@
 
   \texttt{-{-}continue} führt auch noch die weiteren Tasks nach einem Error aus.
 
-  \item %c)
+  \item % c)
   gradle check macht exklusiv \texttt{:detekt} und \texttt{:ktlintMainSourceSetCheck}.
 
   Dann macht gradle test diese nicht, \texttt{:test} aber schon und bekommt auch nur dort den Failure.
@@ -64,5 +64,24 @@
 
 \section*{Aufgabe 2.2}
 \label{sec:a22}
+
+\begin{enumerate}[label=\alph*)]
+
+  \item % a)
+  \item % b)
+  Nach der Änderung sind alle Tests successful.
+
+  \texttt{DoublyLinkedListTest > testGetThrowsForInvalidIndex() PASSED}
+
+  \texttt{DoublyLinkedListTest > testGetReturnsValueAtIndex() PASSED}
+
+  \item %c)
+  BUILD SUCCESSFUL in 1s
+
+  12 actionable tasks: 6 executed, 6 up-to-date
+
+  Configuration cache entry reused.
+
+\end{enumerate}
 
 \end{document}
