@@ -1,6 +1,7 @@
 \documentclass{article}
 \usepackage{zref-clever}
 \usepackage{enumitem}
+\usepackage{graphicx}
 
 \title{Übungszettel 2}
 \author{Linus Faber (4764260), Adrian Wünschel (4763715)}
@@ -56,7 +57,7 @@
 
   \texttt{-{-}continue} führt auch noch die weiteren Tasks nach einem Error aus.
 
-  \item %c)
+  \item % c)
   gradle check macht exklusiv \texttt{:detekt} und \texttt{:ktlintMainSourceSetCheck}.
 
   Dann macht gradle test diese nicht, \texttt{:test} aber schon und bekommt auch nur dort den Failure.
@@ -64,5 +65,37 @@
 
 \section*{Aufgabe 2.2}
 \label{sec:a22}
+
+\begin{enumerate}[label=\alph*)]
+
+  \item % a)
+  -
+  \item % b)
+  Nach der Änderung sind alle Tests successful.
+
+  \texttt{DoublyLinkedListTest > testGetThrowsForInvalidIndex() PASSED}
+
+  \texttt{DoublyLinkedListTest > testGetReturnsValueAtIndex() PASSED}
+
+  \item %c)
+  BUILD SUCCESSFUL in 1s
+
+  12 actionable tasks: 6 executed, 6 up-to-date
+
+  Configuration cache entry reused.
+
+  \item % d)
+  Es wurde kein Workflow Lauf gestartet, weil in dem on-Abschnitt nur main als Branch genannt wird.
+
+  \item % e)
+  \begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{pics/push_build.png}
+    \caption{Push Build}
+    \label{fig:push_build}
+\end{figure}
+
+
+\end{enumerate}
 
 \end{document}
