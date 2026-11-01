@@ -3,6 +3,7 @@
 \usepackage{enumitem}
 \usepackage{graphicx}
 \usepackage{float}
+\usepackage{hyperref}
 
 
 \title{Übungszettel 2}
@@ -10,6 +11,11 @@
 
 \begin{document}
 \maketitle
+
+\begin{abstract}
+Dies ist unsere Abgabe zum zweiten Zettel des Moduls Software Engineering (ISE).
+Unser Verlauf ist einsehbar unter unserem \href{https://github.com/LinusFaber/ise26-27_assignment02}{Repository}.
+\end{abstract}
 
 \section*{Aufgabe 2.1}
 \label{sec:a21}
@@ -110,6 +116,39 @@
     \caption{Resolve}
     \label{fig:resolve}
   \end{figure}
+
+\end{enumerate}
+
+
+\section*{Aufgabe 2.3}
+\label{sec:a23}
+
+\begin{enumerate}[label=\alph*)]
+  \item % a)
+  Befehl um Datei ausführen zu können:
+
+  \texttt{chmod +x .git/hooks/pre-commit}
+
+  \item % b)
+  \texttt{Task :ktlintMainSourceSetCheck FAILED}
+
+  after Fix:
+
+  BUILD SUCCESSFUL in 1s
+
+  7 actionable tasks: 2 executed, 5 up-to-date
+
+  Configuration cache entry reused.
+
+  [main 909e2fb] linus[main] - a2.3b hooktesting after ktlintFormat
+
+  \item % c)
+  Warum führt die CI-Pipeline die Checks trotzdem aus?
+
+  \begin{itemize}
+    \item   Hooks laufen lokal und können übersprungen werden.
+    \item Wir wissen und finden keinen zweiten Grund. Bitte um Rückmeldung welcher?!
+  \end{itemize}
 
 \end{enumerate}
 
