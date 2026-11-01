@@ -49,3 +49,13 @@ gradle/wrapper/
 *.log
 *.log.*
 *.lck
+
+#######
+# Tex #
+#######
+*.pdf
+*.aux
+*.log
+*.fdb_latexmk
+*.fls
+*.synctex.gz
