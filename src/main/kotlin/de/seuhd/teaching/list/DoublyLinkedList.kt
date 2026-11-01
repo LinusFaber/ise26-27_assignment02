@@ -11,8 +11,6 @@ class DoublyLinkedList {
     var length: Int = 0
         private set
 
-    val maxIndex = 1000
-
     /**
      * Appends the value of [e] to the end of this list.
      * [e] itself is not linked into this list, so it may belong to another list.
@@ -98,7 +96,7 @@ class DoublyLinkedList {
      */
     fun get(index: Int): Double {
         if (index < 0 || index >= length) throw IndexOutOfBoundsException("Index is out of bounds")
-        if (index > maxIndex) println("Index exceeds the limit")
+        if (index > 1000) println("Index exceeds the limit")
         var element = begin
         repeat(index) { element = element!!.next }
         return element!!.value
